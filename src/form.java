@@ -91,7 +91,7 @@ public class form extends JFrame{
                         Pattern pattern = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
                         Matcher matcher = pattern.matcher(newValue);
 
-                        if (newValue.isEmpty() && !matcher.matches()) {
+                        if (newValue.isEmpty() || !matcher.matches()) {
                             JOptionPane.showMessageDialog(null, "Invalid Email!", "Input Error", JOptionPane.ERROR_MESSAGE);
                             isValid = false;
                             refreshTable();
