@@ -70,11 +70,6 @@ public class NewContact extends JFrame{
                 String Email = textField3.getText();
                 String Address = textField4.getText();
 
-                boolean allFieldsFilled = !textField1.getText().isEmpty() &&
-                        !textField2.getText().isEmpty() &&
-                        !textField3.getText().isEmpty() &&
-                        !textField4.getText().isEmpty();
-
                 if (Name.isEmpty() || Phone.isEmpty() || Email.isEmpty() || Address.isEmpty() || !isPhoneValid || !isEmailValid) {
                     JOptionPane.showMessageDialog(null, "All fields must be filled correctly!", "Input Error", JOptionPane.ERROR_MESSAGE);
                     return;
